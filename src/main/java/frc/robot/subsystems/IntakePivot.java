@@ -4,10 +4,10 @@ import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
 import edu.wpi.first.wpilibj.motorcontrol.MotorController;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import frc.robot.utils.ShuffleboardSpeed;
 
+// TODO: Add limit switches
 public class IntakePivot extends MotoredSubsystem {
   private final MotorController intakePivot = new WPI_VictorSPX(Constants.IntakePivot.MOTOR_ID);
   private final ShuffleboardSpeed speed;
