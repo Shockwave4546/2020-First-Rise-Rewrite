@@ -15,6 +15,7 @@ public class AdjustableDouble<T extends AdjustableDouble<T>> extends AdjustableV
     addTo(tab, name);
   }
 
+  @SuppressWarnings("unchecked")
   public T range(double min, double max) {
     properties(Map.of("min", min, "max", max));
     return (T) this;

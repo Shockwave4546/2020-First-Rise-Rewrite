@@ -14,26 +14,31 @@ public abstract class AdjustableValue<T, V extends AdjustableValue<T, V>> implem
   protected T def;
   protected NetworkTableEntry entry;
 
+  @SuppressWarnings("unchecked")
   public V properties(Map<String, Object> properties) {
     this.properties = properties;
     return (V) this;
   }
 
+  @SuppressWarnings("unchecked")
   public V widget(BuiltInWidgets widget) {
     this.widget = widget;
     return (V) this;
   }
 
+  @SuppressWarnings("unchecked")
   public V pos(Pos2D pos) {
     this.pos = pos;
     return (V) this;
   }
 
+  @SuppressWarnings("unchecked")
   public V def(T def) {
     this.def = def;
     return (V) this;
   }
 
+  @SuppressWarnings("unchecked")
   public V addTo(ShuffleboardTab tab, String name) {
     final var entry = tab.add(name, def)
       .withWidget(widget)
