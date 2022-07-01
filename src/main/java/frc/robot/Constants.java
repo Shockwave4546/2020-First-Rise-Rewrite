@@ -1,9 +1,9 @@
 package frc.robot;
 
 public class Constants {
-  public static class Controller {
-    public static final int DRIVE_PORT = 0;
-    public static final int OPERATOR_PORT = 1;
+  public static class ControllerPort {
+    public static final int DRIVE = 0;
+    public static final int OPERATOR = 1;
   }
 
   /**
@@ -14,6 +14,8 @@ public class Constants {
     public static final int BACK_LEFT_MOTOR_CHANNEL = 1; // Motor Controller 2 - Red
     public static final int FRONT_RIGHT_MOTOR_CHANNEL = 2; // Motor Controller 3 - Red w/ stripes
     public static final int BACK_RIGHT_MOTOR_CHANNEL = 3; // Motor Controller 3 - Red w/ stripes
+    public static final double LEFT_SPEED_MULTIPLIER = 1.0;
+    public static final double RIGHT_SPEED_MULTIPLIER = 1.0;
   }
   
   public static class Feeder {
@@ -31,8 +33,6 @@ public class Constants {
   public static final class IntakePivot {
     public static final int MOTOR_ID = 12; // Motor Controller 6 - Green
   }
-
-
 
   public static class Flywheel {
 
