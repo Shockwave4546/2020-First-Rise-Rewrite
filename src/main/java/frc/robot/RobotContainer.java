@@ -3,7 +3,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import frc.robot.Constants.ControllerPort;
-import frc.robot.api.controller.ShockwaveController;
+import frc.robot.controller.ShockwaveController;
 import frc.robot.subsystems.drivetrain.Drivetrain;
 
 public class RobotContainer {

@@ -17,10 +17,6 @@ public class Constants {
     public static final double LEFT_SPEED_MULTIPLIER = 1.0;
     public static final double RIGHT_SPEED_MULTIPLIER = 1.0;
   }
-  
-  public static class Feeder {
-    
-  }
 
   public static class FortuneWheel {
     public static final int MOTOR_ID = 10; // Motor Controller 5 - Yellow
@@ -28,6 +24,7 @@ public class Constants {
 
   public static final class Intake {
     public static final int MOTOR_ID = 11; // Motor Controller 6 - Green
+    public static final double DEFAULT_SPEED = 0.6;
   }
 
   public static final class IntakePivot {
@@ -35,6 +32,14 @@ public class Constants {
   }
 
   public static class Flywheel {
+    public static final int MOTOR_ID_ONE = 13;
+    public static final int MOTOR_ID_TWO = 14;
+    public static final double DEFAULT_SPEED_ONE = 0.6;
+    public static final double DEFAULT_SPEED_TWO = 0.6;
+  }
 
+  public static class Feeder {
+    public static final int MOTOR_ID = 15;
+    public static final double DEFAULT_SPEED = 0.6;
   }
 }

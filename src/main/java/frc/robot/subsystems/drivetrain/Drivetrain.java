@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
-import frc.robot.api.shuffleboard.AdjustableSpeed;
+import frc.robot.utils.ShuffleboardSpeed;
 
 public class Drivetrain extends SubsystemBase {
   private final MotorController frontLeft = new Talon(Constants.Drivetrain.FRONT_LEFT_MOTOR_CHANNEL);
@@ -18,17 +18,19 @@ public class Drivetrain extends SubsystemBase {
   private final MotorControllerGroup leftGroup = new MotorControllerGroup(frontLeft, backLeft);
   private final MotorControllerGroup rightGroup = new MotorControllerGroup(frontRight, backRight);
   private final DifferentialDrive diffDrive = new DifferentialDrive(leftGroup, rightGroup);
-  private final AdjustableSpeed leftSpeedMultiplier;
-  private final AdjustableSpeed rightSpeedMultiplier;
+  private final ShuffleboardSpeed leftSpeedMultiplier;
+  private final ShuffleboardSpeed rightSpeedMultiplier;
   private final XboxController controller;
 
   public Drivetrain(ShuffleboardTab speedsTab, XboxController controller) {
-    leftSpeedMultiplier = new AdjustableSpeed(speedsTab, "Left Speed Multiplier", Constants.Drivetrain.LEFT_SPEED_MULTIPLIER);
-    rightSpeedMultiplier = new AdjustableSpeed(speedsTab, "Right Speed Multiplier", Constants.Drivetrain.RIGHT_SPEED_MULTIPLIER);
+    leftSpeedMultiplier = new ShuffleboardSpeed(speedsTab, "Left Speed Multiplier", Constants.Drivetrain.LEFT_SPEED_MULTIPLIER);
+    rightSpeedMultiplier = new ShuffleboardSpeed(speedsTab, "Right Speed Multiplier", Constants.Drivetrain.RIGHT_SPEED_MULTIPLIER);
     this.controller = controller;
     rightGroup.setInverted(true);
   }
 
+  // I highly doubt this will drive straight, since the original code negates both values, but that's just a workaround, so fix it later in the room
+  // https://github.com/Shockwave4546/FIRST-RISE-2020/blob/8900aaa993e7b314ffd21e47cc9d92fa330bef7c/src/main/java/frc/robot/Robot.java#L156
   public void tankDrive(double leftSpeed, double rightSpeed) {
     diffDrive.tankDrive(leftSpeed * leftSpeedMultiplier.get(), rightSpeed * rightSpeedMultiplier.get());
   }
