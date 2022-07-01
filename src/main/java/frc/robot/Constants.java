@@ -34,8 +34,7 @@ public class Constants {
   public static class Flywheel {
     public static final int MOTOR_ID_ONE = 13;
     public static final int MOTOR_ID_TWO = 14;
-    public static final double DEFAULT_SPEED_ONE = 0.6;
-    public static final double DEFAULT_SPEED_TWO = 0.6;
+    public static final double DEFAULT_SPEED = 0.6;
   }
 
   public static class Feeder {
