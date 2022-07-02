@@ -8,7 +8,7 @@ public class Robot extends TimedRobot {
   private final RobotContainer container = new RobotContainer();
 
   @Override public void robotInit() {
-
+    CameraServer.startAutomaticCapture();
   }
 
   @Override public void robotPeriodic() {
@@ -24,7 +24,6 @@ public class Robot extends TimedRobot {
   @Override public void autonomousPeriodic() {}
 
   @Override public void teleopInit() {
-    CameraServer.startAutomaticCapture();
     container.drivetrain.initTeleop();
   }
 

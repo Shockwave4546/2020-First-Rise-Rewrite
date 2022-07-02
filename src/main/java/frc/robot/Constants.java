@@ -1,6 +1,14 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
+
 public class Constants {
+  public static class Tabs {
+    public static final ShuffleboardTab SPEEDS = Shuffleboard.getTab("Speeds");
+    public static final ShuffleboardTab DEBUG = Shuffleboard.getTab("Debug");
+  }
+
   public static class ControllerPort {
     public static final int DRIVE = 0;
     public static final int OPERATOR = 1;
@@ -24,11 +32,12 @@ public class Constants {
 
   public static final class Intake {
     public static final int MOTOR_ID = 11; // Motor Controller 6 - Green
-    public static final double DEFAULT_SPEED = 0.6;
+    public static final double DEFAULT_SPEED = 0.75;
   }
 
   public static final class IntakePivot {
     public static final int MOTOR_ID = 12; // Motor Controller 6 - Green
+    public static final double DEFAULT_SPEED = 0.3;
   }
 
   public static class Flywheel {
@@ -39,6 +48,11 @@ public class Constants {
 
   public static class Feeder {
     public static final int MOTOR_ID = 15;
-    public static final double DEFAULT_SPEED = 0.6;
+    public static final double DEFAULT_SPEED = 0.3;
+  }
+
+  public static class DIO {
+    public static final int TOP_SWITCH = 2;
+    public static final int BOTTOM_SWITCH = 3;
   }
 }
