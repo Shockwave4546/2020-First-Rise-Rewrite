@@ -8,8 +8,8 @@ import frc.robot.subsystems.Flywheel;
 import frc.robot.subsystems.Intake;
 import frc.robot.subsystems.drivetrain.Drivetrain;
 import frc.robot.subsystems.intakepivot.IntakeDown;
-import frc.robot.subsystems.intakepivot.IntakeUp;
 import frc.robot.subsystems.intakepivot.IntakePivot;
+import frc.robot.subsystems.intakepivot.IntakeUp;
 
 public class RobotContainer {
   private final ShockwaveController driveController = new ShockwaveController(ControllerPort.DRIVE);
