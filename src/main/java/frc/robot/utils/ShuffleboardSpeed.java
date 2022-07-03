@@ -27,10 +27,6 @@ public class ShuffleboardSpeed {
     return speedEntry.getDouble(defaultSpeed);
   }
 
-  public NetworkTableEntry getRaw() {
-    return speedEntry;
-  }
-
   public void set(double speed) {
     speedEntry.setDouble(speed);
   }

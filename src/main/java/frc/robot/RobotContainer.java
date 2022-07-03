@@ -2,7 +2,6 @@ package frc.robot;
 
 import frc.robot.Constants.ControllerPort;
 import frc.robot.Constants.Tabs;
-import frc.robot.commands.RunMotor;
 import frc.robot.controller.ShockwaveController;
 import frc.robot.subsystems.Feeder;
 import frc.robot.subsystems.Flywheel;
@@ -32,8 +31,8 @@ public class RobotContainer {
   }
 
   private void configureController() {
-    driveController.aButton.get().whileHeld(new RunMotor(flywheel));
-    driveController.bButton.get().whileHeld(new RunMotor(intake));
-    driveController.xButton.get().whileHeld(new RunMotor(feeder));
+    driveController.aButton.get().whileHeld(flywheel.asCommand());
+    driveController.bButton.get().whileHeld(intake.asCommand());
+    driveController.xButton.get().whileHeld(feeder.asCommand());
   }
 }
