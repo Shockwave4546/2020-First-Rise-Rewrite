@@ -31,8 +31,8 @@ public class RobotContainer {
   }
 
   private void configureController() {
-    driveController.aButton.get().whileHeld(flywheel.asCommand());
-    driveController.bButton.get().whileHeld(intake.asCommand());
-    driveController.xButton.get().whileHeld(feeder.asCommand());
+    driveController.aButton.whileHeld(flywheel.asCommand());
+    driveController.bButton.whileHeld(intake.asCommand());
+    driveController.xButton.whileHeld(feeder.asCommand());
   }
 }
